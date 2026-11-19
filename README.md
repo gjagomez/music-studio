@@ -4,7 +4,17 @@ Una interfaz en español para crear música con una instalación local de **ACE-
 Cada persona ejecuta su propio motor, guarda sus canciones en su computadora y puede modificar
 y compartir Alma. No requiere una cuenta de Alma, créditos ni suscripción.
 
-![Interfaz de Alma con el formulario para crear una canción](docs/alma-estudio.png)
+## Capturas del estudio
+
+Podés cambiar de tema con **Día** y **Noche**. Las capturas muestran la biblioteca del autor.
+
+### Modo claro
+
+![Q Alma en modo claro con las canciones del autor en la biblioteca](docs/alma-claro.png)
+
+### Modo oscuro
+
+![Q Alma en modo oscuro con las canciones del autor en la biblioteca](docs/alma-oscuro.png)
 
 ## Qué incluye
 
