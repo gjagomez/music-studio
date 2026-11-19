@@ -1,0 +1,5 @@
+// Shared inline icons keep library actions consistent and readable in both themes.
+window.libraryIcon=name=>{
+const paths={play:'<path d="m9 5 11 7-11 7V5Z" fill="currentColor" stroke="none"/>',pause:'<path d="M7 5h3v14H7zm7 0h3v14h-3z" fill="currentColor" stroke="none"/>',edit:'<path d="m15 4 5 5M4 20l5-1L21 7a2 2 0 0 0-5-5L4 15v5Z"/>',video:'<rect x="3" y="5" width="13" height="14" rx="3"/><path d="m16 10 5-3v10l-5-3"/>',horizontal:'<rect x="2" y="5" width="20" height="14" rx="3"/><path d="m10 9 5 3-5 3V9Z"/>',vertical:'<rect x="6" y="2" width="12" height="20" rx="3"/><path d="m10 8 5 4-5 4V8Z"/>',download:'<path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/>',trash:'<path d="M3 6h18M9 6V3h6v3M5 6l1 15h12l1-15M10 10v7m4-7v7"/>',reuse:'<path d="M20 7v5h-5M4 17v-5h5M5 8a7 7 0 0 1 12-3l3 3M4 16l3 3a7 7 0 0 0 12-3"/>',previous:'<path d="M5 5v14m14-14L8 12l11 7V5Z"/>',next:'<path d="M19 5v14M5 5l11 7-11 7V5Z"/>',autoplay:'<path d="M3 7h13l-3-3m3 3-3 3M21 17H8l3 3m-3-3 3-3"/>'};
+return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+(paths[name]||paths.play)+'</svg>';
+};

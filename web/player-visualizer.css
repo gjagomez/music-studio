@@ -1,0 +1,34 @@
+/* The waveform fills the entire fixed player, independent of the control row. */
+#player{position:fixed;left:0!important;right:0!important;bottom:0;width:100%;height:100px;min-height:100px;padding:8px 22px 40px;display:flex;align-items:center;gap:18px;isolation:isolate;overflow:hidden;border-top:1px solid var(--border);background:var(--panel);z-index:8}
+#player[hidden]{display:none}
+#player>#playerWaves{position:absolute!important;inset:0!important;display:block;width:100%!important;height:100%!important;max-width:none;max-height:none;margin:0;padding:0;z-index:0;pointer-events:none;flex:none}
+#player>#playerWaves[hidden]{display:none}
+#player>:not(canvas){position:relative;z-index:1}
+#player .player-transport{flex:1;min-width:180px;display:grid;align-items:center}
+#player .player-transport audio{width:100%;min-width:0;margin:0}
+#player .player-info{padding:7px 10px;border-radius:10px;background:color-mix(in srgb,var(--panel) 75%,transparent);backdrop-filter:blur(8px)}
+#player.is-playing .player-art{background:var(--accent-soft);color:var(--accent)}
+body main{padding-bottom:114px!important}body .sidebar{bottom:114px}
+@media(max-width:900px){#player{padding:6px 12px 8px;height:100px;min-height:100px;gap:4px 8px;flex-wrap:wrap}#player .player-transport{order:4;flex-basis:100%;min-width:0}#player .player-transport audio{order:initial;flex-basis:auto}body main{padding-bottom:114px!important}body .sidebar{bottom:auto}}
+
+@media(max-width:900px){#player .player-art{width:28px;height:28px}#player .player-info{padding:2px 7px}#player .player-info strong{margin-bottom:3px}#player .download{font-size:9px}}
+/* Let the light ribbon remain visible through the native playback controls. */
+#player .player-transport audio{opacity:.7;transition:opacity .18s ease}
+#player .player-transport audio:hover,#player .player-transport audio:focus-within{opacity:.95}
+@media(prefers-reduced-motion:reduce){#player .player-transport audio{transition:none}}
+/* Frosted control surface; preserve crisp labels while light shows through the panel. */
+#player .playback-controls{display:flex;align-items:center;gap:12px;width:100%;min-height:44px;padding:6px 13px;border:1px solid #ffffff24;border-radius:28px;background:linear-gradient(115deg,#ffffff16,#ffffff08);box-shadow:inset 0 1px 0 #ffffff12,0 4px 18px #00000012;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--text)}
+#player .playback-controls[hidden],#player audio[hidden]{display:none}
+#player .playback-controls button{display:grid;place-items:center;flex-shrink:0;width:28px;height:28px;border:0;border-radius:50%;background:transparent;color:inherit;padding:4px}
+#player .playback-controls button:hover{background:#ffffff16}#player .playback-controls button:disabled{opacity:.35;cursor:default}
+#player .playback-controls svg{width:20px;height:20px}.playback-time{font-size:11px;white-space:nowrap;font-variant-numeric:tabular-nums;letter-spacing:.2px;min-width:76px}
+#player .playback-seek{flex:1;min-width:30px;margin:0;display:flex;align-items:center}#player .playback-volume{width:64px;margin:0;display:flex;align-items:center}
+#player .playback-controls input[type=range]{appearance:none;-webkit-appearance:none;width:100%;height:4px;padding:0;margin:0;border:0;border-radius:8px;outline-offset:5px;cursor:pointer;background:linear-gradient(to right,currentColor var(--seek-progress,0%),#ffffff30 var(--seek-progress,0%));color:var(--text)}
+#player .playback-volume input[type=range]{background:#ffffff38}
+#player .playback-controls input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:10px;height:10px;border-radius:50%;background:var(--text);border:0;box-shadow:0 0 9px #ffffff30}
+#player .playback-controls input[type=range]::-moz-range-thumb{width:10px;height:10px;border-radius:50%;background:var(--text);border:0}
+#player .playback-controls input:disabled{opacity:.3;cursor:default}#player .is-muted{opacity:.45}
+[data-theme=light] #player .playback-controls{background:linear-gradient(115deg,#ffffff55,#ffffff20);border-color:#6672a025;box-shadow:inset 0 1px 0 #ffffff70,0 4px 18px #25326b09}
+[data-theme=light] #player .playback-controls input[type=range]{background:linear-gradient(to right,currentColor var(--seek-progress,0%),#40507826 var(--seek-progress,0%))}
+[data-theme=light] #player .playback-volume input[type=range]{background:#40507826}
+@media(max-width:900px){#player .playback-controls{min-height:36px;padding:3px 9px;gap:8px}#player .playback-volume{display:none}.playback-time{font-size:10px;min-width:70px}}
