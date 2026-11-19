@@ -6,15 +6,15 @@ y compartir Alma. No requiere una cuenta de Alma, créditos ni suscripción.
 
 ## Capturas del estudio
 
-Podés cambiar de tema con **Día** y **Noche**. Las capturas muestran la biblioteca del autor.
-
-### Modo claro
-
-![Q Alma en modo claro con las canciones del autor en la biblioteca](docs/alma-claro.png)
+Podés cambiar de tema con **Día** y **Noche**. En ambas capturas se ve la biblioteca del autor mientras se reproduce «Vulnerable».
 
 ### Modo oscuro
 
-![Q Alma en modo oscuro con las canciones del autor en la biblioteca](docs/alma-oscuro.png)
+![Q Alma en modo oscuro con Vulnerable en reproducción](docs/alma-oscuro.png)
+
+### Modo claro
+
+![Q Alma en modo claro con Vulnerable en reproducción](docs/alma-claro.png)
 
 ## Qué incluye
 
